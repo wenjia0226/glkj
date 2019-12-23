@@ -1,0 +1,37 @@
+/**index.wxss**/
+.indexCon {
+  width: 80%;
+  margin: 0 10%;
+}
+.logoCon {
+  overflow: hidden;
+  text-align: center;
+}
+.logoImg {
+  width: 100px;
+  height: 100px
+}
+.stuName {
+  line-height: 20px;
+}
+.currentT {
+  height: 20px;
+  line-height: 20px;
+  color: #0e0;
+  font-size: 14px;
+  padding: 10px 5px;
+}
+.sightCon {
+  display: flex;
+  justify-content: space-around;
+}
+.sightL {
+  width: 50%;
+  font-size: 20px;
+  color: blue;
+}
+.sightLower {
+  font-size: 12px;
+  color: #000;
+  padding: 0 10px;
+}
