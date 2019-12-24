@@ -1,0 +1,69 @@
+<!--logs.wxml-->
+<view class="bg">
+<view class="wrapper">
+  <!-- 头部轮播 -->
+ <view class="arc_header">
+   <view class="logo_wrap">
+      <image class="logo_img" src="../image/logo.png" style="width:80rpx;height:80rpx;">
+      
+      </image>
+   </view>
+   
+   <view class="headerCon" style="width:200rpx;height:80rpx;">
+      <view class="hName">小米</view>
+      <view class="bornDate">
+        出生日期 2019-12-23
+      </view>
+   </view>
+   <view class="time_icon">
+      <image src="../../resource/find.png" style="width:40rpx;height:40rpx;">
+   </image>
+   </view>
+ </view>
+ <!-- 出生日期 -->
+ <view class="born"> 
+     2019年12月
+ </view>
+ <!-- 列表 -->
+ <view class="list_wrap">
+      <view class="list_left">
+        <image src="../../resource/find.png" style="width: 50rpx;height: 50rpx;"></image>
+        <view class="cordeTime">23 / 13:12</view>
+      </view>
+      <view class="list_right">
+        <view class="lefteye">
+           <image src="../../resource/find.png" style="width: 50rpx;height: 50rpx"></image>
+           <view class="" hover-class="none" hover-stop-propagation="false">
+             4.5 / 0.3
+           </view>
+        </view>
+        <view class="lefteye">
+            <image src="../../resource/find.png" style="width: 50rpx;height: 50rpx"></image>
+            <view class="" hover-class="none" hover-stop-propagation="false">
+              4.5 / 0.3
+            </view>
+        </view>
+      </view>
+ </view>
+  <view class="list_wrap">
+      <view class="list_left">
+        <image src="../../resource/find.png" style="width: 50rpx;height: 50rpx;"></image>
+        <view class="cordeTime">23 / 13:12</view>
+      </view>
+      <view class="list_right">
+        <view class="lefteye">
+           <image src="../../resource/find.png" style="width: 50rpx;height: 50rpx"></image>
+           <view class="" hover-class="none" hover-stop-propagation="false">
+             4.5 / 0.3
+           </view>
+        </view>
+        <view class="lefteye">
+            <image src="../../resource/find.png" style="width: 50rpx;height: 50rpx"></image>
+            <view class="" hover-class="none" hover-stop-propagation="false">
+              4.5 / 0.3
+            </view>
+        </view>
+      </view>
+ </view>
+</view>
+</view>

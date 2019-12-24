@@ -1,26 +1,37 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/find/index"
+    "pages/archives/archives",
+
+    "pages/find/index",
+    "pages/index1/index1"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#fff"
+    
   },
   "tabBar": {
     "list": [{
       "pagePath": "pages/index/index",
-      "text": "首页"
+      "text": "首页",
+      "iconPath": "/resource/shouye.png",
+      "selectedIconPath": "/resource/shouye_1.png"
+
     }, {
-      "pagePath": "pages/logs/logs",
-      "text": "日志"
+      "pagePath": "pages/archives/archives",
+      "text": "视力档案",
+      "iconPath": "/resource/dangan.png",
+      "selectedIconPath": "/resource/danganactive.png"
     },
     {
       "pagePath": "pages/find/index",
-      "text": "发现"
+      "text": "发现",
+      "iconPath": "/resource/find.png",
+      "selectedIconPath": "/resource/faxian.png"
     }]
   },
   "style": "v2",

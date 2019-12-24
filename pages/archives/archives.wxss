@@ -1,0 +1,83 @@
+.bg {
+  background-color: #eee;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+.arc_header {
+  display: flex;
+  align-items: center;
+  margin: 10rpx;
+  background: orange;
+  border-radius: 5rpx;
+  box-shadow: 0 5rpx 5rpx 5rpx red;
+  color: #fff;
+}
+.hName {
+
+  font-size: 30rpx;
+}
+.bornDate {
+  font-size: 20rpx;
+}
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+.logo_wrap{
+  flex: 2
+}
+.logo_img{
+  padding: 10rpx;
+}
+.headerCon {
+  flex: 7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.time_icon {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.born {
+  display: flex;
+  justify-content: center;
+  padding: 15rpx;
+  margin: 15rpx 0;
+  text-align:center;
+}
+.list_wrap{
+  display: flex;
+  line-height: 60rpx;
+  min-height: 60rpx;
+  border-radius: 15rpx;
+  background: #ffff;
+  margin:30rpx 10px;
+}
+.list_left {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: red;
+  padding: 10rpx;
+  border-radius: 20rpx 0 0 20rpx;
+}
+.list_right {
+  flex: 8;
+  justify-content: center;
+  align-items: center;
+}
+.lefteye{
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  padding: 10rpx;
+}
