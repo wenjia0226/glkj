@@ -1,0 +1,5 @@
+/* components/myTitle.wxss */
+.header_wrap {
+    height: 30rpx;
+    background: blue;
+}

@@ -1,0 +1,50 @@
+<view class="main">
+  <view class="camera_wrap">
+    <image src="{{tempFilePaths}}" mode="aspecFill" style="width: 200rpx;height:200rpx" bindtap="chooseImage"></image>
+  </view>
+  <form bindsubmit="formSubmit">
+
+      <!-- 昵称 -->
+    <view class="user-section">
+      <view class="user_title">昵称</view>
+      <view class="user_title_input">
+        <input class="weui-input" auto-focus  placehoder-class="center" placeholder="小米"/>
+      </view>
+    </view>
+    <!-- 性别 -->
+    <view class="user-section">
+      <view class="user_title">性别</view>
+      <view class="user_classify ">
+        <view class="user_gap {{ currentIndex == 1 ? 'activeaBlue': ''}}" data-index="1" bindtap="addBlueActive">
+          <text>男</text>
+        </view>
+        <view class="user_gap {{ currentIndex == 2 ? 'active': ''}}" data-index="2" bindtap="addBlueActive">
+          <text>女</text>
+        </view>
+      </view>
+    </view>
+    <!-- 出生日期 -->
+    <view class="born_data">
+       <view class="user_title">出生日期</view>
+        <picker mode="date" value="{{date}}" start="1990-01-01" end="2020-01-01" bindchange="bindDataChange">
+          <view class="data_wrap">
+               {{data}}
+          </view>
+        </picker>
+    </view>
+      <!-- 学校 -->
+    <view class="user-section">
+      <view class="user_title">学校</view>
+      <view class="user_title_input">
+        <input class="weui-input" auto-focus placeholder="请输入学校"/>
+      </view>
+    </view>
+      <!-- 年级 -->
+    <view class="user-section">
+      <view class="user_title">年级</view>
+      <view class="user_title_input">
+        <input class="weui-input" auto-focus placeholder="请输入年级"/>
+      </view>
+    </view>
+  </form>
+</view>

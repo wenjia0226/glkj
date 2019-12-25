@@ -1,22 +1,46 @@
 <!--index.wxml-->
-<view class="indexCon bg">
-  <view class="logoCon">
-   <canvas canvas-id="anvertor" style="width:750px;height:150px"></canvas>
-    <view class="stuName">小明</view>
-    <view class="currentT">最近检测时间：2019:12:01</view>
+<view class="main">
+  <view class="swiper_wrap">
+   <!-- <canvas canvas-id="anvertor" style="width:750px;height:150px"></canvas> -->
+   <!-- 首页轮播图 -->
+   <view class="nav_wrap">
+     <scroll-view class="nav" scroll-x>
+       <view class="nav_item" wx:for="{{navList}}">
+        <navigator url="../edit/edit?id={{item.id}}" redirect="true">
+        <view class="nav_item_wrap">
+          <image src="../../resource/logo.png" mode="widthFix" style="width: 200rpx;height: 200rpx"></image>
+          <text class="username">{{item.username}}</text>
+        </view>
+        </navigator>
+       </view>
+     </scroll-view>
+   </view>
+    <!-- 最近登录时间 -->
+    <view class="latestTime">最近检测时间：2019:12:01</view>
   </view>
-  <view class="sightCon">
-      <view>
-        <text class="sightL">4.5<text class="sightLower">/</text></text>
-        <text>0.3</text>
+ <!-- 视力数据 -->
+  <view class="sight_wrap">
+      <view class="sight_left">
+        <view class="num_wrap">
+          <text class="highNum">4.5 </text>
+          <text class="lowNum"> / 0.3</text>
+        </view>
+        <view class="sight_title">
+          左眼视力
+        </view>
       </view>
       <text>|</text>
-        <view>
-        <text class="sightL">4.5<text class="sightLower">/</text></text>
-        <text>0.3</text>
+       <view class="sight_left">
+        <view class="num_wrap">
+          <text class="highNum">4.5 </text>
+          <text class="lowNum"> / 0.3</text>
         </view>
+        <view class="sight_title">
+          右眼视力
+        </view>
+      </view>
   </view>
-  <view>
+  <view class="button_wrap">
       <canvas style="width: 750px;height: 200px;" canvas-id="posterCanvas"/>
   </view>
 </view>

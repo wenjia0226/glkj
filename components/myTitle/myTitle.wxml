@@ -1,0 +1,4 @@
+<!--components/myTitle.wxml-->
+<view class="header_wrap">
+  <image src="../resource/home.png"></image>
+</view>

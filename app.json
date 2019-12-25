@@ -1,17 +1,16 @@
 {
   "pages": [
+    "pages/edit/edit",
     "pages/index/index",
     "pages/archives/archives",
-
-    "pages/find/index",
-    "pages/index1/index1"
-  ],
+    "pages/find/find"
+    
+    ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black",
-    "backgroundColor": "#fff"
+    "backgroundCfolor": "#fff"
     
   },
   "tabBar": {
@@ -28,7 +27,7 @@
       "selectedIconPath": "/resource/danganactive.png"
     },
     {
-      "pagePath": "pages/find/index",
+      "pagePath": "pages/find/find",
       "text": "发现",
       "iconPath": "/resource/find.png",
       "selectedIconPath": "/resource/faxian.png"

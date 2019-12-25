@@ -7,7 +7,25 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    navList: [
+      {
+        "id": 1,
+      "username": '小明'
+      },
+      {
+        "id": 2,
+        "username": '小帆帆'
+      },
+      {
+        "id": 3,
+        "username": 'xiaohu'
+      },
+      {
+        "id": 4,
+        "username": '大麦'
+      }
+    ]
   },
   //事件处理函数
   bindViewTap: function() {
@@ -46,7 +64,7 @@ Page({
     this.draw(ctx, 50,"../image/logo.png")
     var ctx1 = wx.createCanvasContext('posterCanvas');
     var ctx2 = wx.createCanvasContext('posterCanvas2');
-    this.drawCirlce(ctx1,50,"red")
+    this.drawCirlce(ctx1,50,"#03a89e")
     
   },
     draw(ctx,radius,url) {
@@ -55,7 +73,7 @@ Page({
       ctx.beginPath() //开始创建一个路径
       ctx.arc(150, 55, radius, 0, 2 * Math.PI, false) //画一个圆形裁剪区域
       ctx.lineWidth = 4;
-      ctx.strokeStyle="orange";
+      ctx.strokeStyle="#40e0d0";
       ctx.stroke(); //描边
       ctx.clip() //裁剪
       ctx.drawImage(url, 100, 0, 100, 100) //绘制图片

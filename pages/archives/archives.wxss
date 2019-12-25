@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   margin: 10rpx;
-  background: orange;
+  background: #03a89e;
   border-radius: 5rpx;
   box-shadow: 0 5rpx 5rpx 5rpx red;
   color: #fff;
