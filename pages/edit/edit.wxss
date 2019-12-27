@@ -36,6 +36,14 @@
     justify-content: space-around;
     align-items: center;
 }
+.sex-classify {
+    width: 100%;
+}
+.femail {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 .user_gap {
    width: 45%;
    height: 80rpx;
@@ -60,4 +68,16 @@
     background: #eee;
     text-align: center;
     line-height: 80rpx;
+}
+.btn-area {
+    display: flex;
+}
+.btn-add {
+    margin: 20rpx 0;
+    width: 30% !important;
+    background: #228b22;
+    font-weight: normal;
+    color: #fff;
+    font-size: 28rpx;
+    
 }

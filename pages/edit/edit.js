@@ -8,25 +8,30 @@ import WxValidate from '../../utils/WxValidate.js'
    */
   data: {
     data: '2016-09-01',
+    nicheng: '',
+    sex: '男',
+    school: '',
+    grade: '',
+    loading: '',
     items: [
       { name: 'USA', value: '女' },
       { name: 'CHN', value: '男', checked: 'true' },
     ],
     tempFilePaths: '../image/logo.png',
     show: true,
-    currentIndex: 0
+    currentIndex: 0,
+
+    
   },
   addBlueActive (e) {
-   console.log(e.target.dataset.index)
     this.setData({
       currentIndex: e.target.dataset.index
     })
 
   },
   //调出相机
-  chooseImage(e) {
+  chooseImage() {
     var that = this;
-  
     wx.chooseImage({
       sizeType: ['original', 'compressed'],
       sourceType: ['album','camera'],
@@ -37,11 +42,15 @@ import WxValidate from '../../utils/WxValidate.js'
       }
     })
   },
+  //日期改变
   bindDataChange:function(e) {
-    console.log(e.target.value)
     this.setData({
-      date: e.target.value
+      data: e.detail.value
     })
+  },
+  //表单提交e
+  formSubmit: function(e) {
+      console.log('form发生了submit事件，携带数据为',e.detail)
   },
   /**
    * 生命周期函数--监听页面加载

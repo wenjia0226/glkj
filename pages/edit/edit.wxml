@@ -3,24 +3,33 @@
     <image src="{{tempFilePaths}}" mode="aspecFill" style="width: 200rpx;height:200rpx" bindtap="chooseImage"></image>
   </view>
   <form bindsubmit="formSubmit">
-
       <!-- 昵称 -->
     <view class="user-section">
       <view class="user_title">昵称</view>
       <view class="user_title_input">
-        <input class="weui-input" auto-focus  placehoder-class="center" placeholder="小米"/>
+        <input class="weui-input" auto-focus name="nicheng" placehoder-class="center" placeholder="小米"/>
       </view>
     </view>
     <!-- 性别 -->
     <view class="user-section">
       <view class="user_title">性别</view>
       <view class="user_classify ">
-        <view class="user_gap {{ currentIndex == 1 ? 'activeaBlue': ''}}" data-index="1" bindtap="addBlueActive">
+        <!-- <view class="user_gap {{ currentIndex == 1 ? 'activeaBlue': ''}}" data-index="1" bindtap="addBlueActive">
           <text>男</text>
         </view>
         <view class="user_gap {{ currentIndex == 2 ? 'active': ''}}" data-index="2" bindtap="addBlueActive">
           <text>女</text>
-        </view>
+        </view> -->
+        <radio-group name="sex" class="sex-classify">
+          <label for=""  class="femail">
+            <radio  value="男"  class= checked>
+              男
+            </radio>
+            <radio class=""  value="女">
+              女
+            </radio>
+          </label>
+        </radio-group>
       </view>
     </view>
     <!-- 出生日期 -->
@@ -36,15 +45,20 @@
     <view class="user-section">
       <view class="user_title">学校</view>
       <view class="user_title_input">
-        <input class="weui-input" auto-focus placeholder="请输入学校"/>
+        <input  name="school" class="weui-input" auto-focus placeholder="请输入学校"/>
       </view>
     </view>
       <!-- 年级 -->
     <view class="user-section">
-      <view class="user_title">年级</view>
+      <view class="user_title">年级</view>  
       <view class="user_title_input">
-        <input class="weui-input" auto-focus placeholder="请输入年级"/>
+        <input class="weui-input" name="grade" auto-focus placeholder="请输入年级"/>
       </view>
+    </view>
+    <!-- 提交 删除 -->
+    <view class="btn-area">
+        <button class="btn-add" form-type="submit" hover-class="activeaBlue" loading="{{loading}}">提交</button>
+        <button class="btn-add" form-type="reset">重置</button>
     </view>
   </form>
 </view>

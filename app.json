@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/edit/edit",
+   
     "pages/index/index",
+    "pages/edit/edit",
     "pages/archives/archives",
     "pages/find/find"
     
