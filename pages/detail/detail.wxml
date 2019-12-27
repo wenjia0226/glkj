@@ -1,0 +1,48 @@
+<!--pages/detail/detail.wxml-->
+<!-- 头部 -->
+<view class="bg">
+    <view class="detail_wrap"> 
+        <!-- 表头 -->
+        <view class="detail_header">
+            <view class="left_wrap">
+                <view class="user_name">
+                    小米
+                </view>
+                <view class="data">2019-12-23</view>
+            </view>
+            <view class="right_wrap">
+                <image src="../../resource/logo.png" style="width: 150rpx; height: 150rpx" ></image>
+            </view>   
+        </view>
+        <!-- 检测设置 -->
+        <view class="detect_title">
+            <view class="title">检测设置</view>
+            <view class="correct">纠正检测参数</view>
+        </view>
+        <view class="detect_content">
+            <view class="detect_data">检测时间：2019-12-23 13：48</view>
+            <view class="detail_total">
+                <view class="detail_item">
+                    <view class="detail_msg"> 检测距离</view>
+                    <view class="detail_num">2.5m</view>
+                </view> 
+                  <view class="detail_item">
+                    <view class="detail_msg"> 检测距离</view>
+                    <view class="detail_num">2.5m</view>
+                </view> 
+                   <view class="detail_item">
+                    <view class="detail_msg"> 检测距离</view>
+                    <view class="detail_num">2.5m</view>
+                </view> 
+                  <view class="detail_item">
+                    <view class="detail_msg"> 检测距离</view>
+                    <view class="detail_num">2.5m</view>
+                </view> 
+                 <view class="detail_item">
+                    <view class="detail_msg"> 检测距离</view>
+                    <view class="detail_num">2.5m</view>
+                </view> 
+            </view>
+        </view>
+    </view>
+ </view>

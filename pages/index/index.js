@@ -8,6 +8,7 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    currentIndex: 0,
     navList: [
       {
         "id": 1,
@@ -26,6 +27,12 @@ Page({
         "username": '大麦'
       }
     ]
+  },
+  activeNav: function(e) {
+    console.log(e.detail)
+    this.setData({
+      currentIndex: e.detail.current
+    })
   },
   //事件处理函数
   bindViewTap: function() {
@@ -63,7 +70,6 @@ Page({
     var ctx = wx.createCanvasContext('anvertor');
     this.draw(ctx, 50,"../image/logo.png")
     var ctx1 = wx.createCanvasContext('posterCanvas');
-    var ctx2 = wx.createCanvasContext('posterCanvas2');
     this.drawCirlce(ctx1,50,"#03a89e")
     
   },
@@ -81,19 +87,26 @@ Page({
       ctx.draw();
     },
     drawCirlce(ctx, radius,color) {
-      ctx.rect(0, 0, 300, 200);
-      ctx.save();
-      ctx.beginPath() //开始创建一个路径
-      ctx.arc(150, 55, radius, 0, 2 * Math.PI, false) //画一个圆形裁剪区域
-      ctx.lineWidth = 10;
-      ctx.strokeStyle= 'orange';
-      ctx.stroke(); //描边
-      ctx.fillStyle = color;
-      ctx.fill();
-      ctx.clip() //裁剪
-     // ctx.drawImage('../image/logo.png', 100, 0, 100, 100) //绘制图片
-      ctx.restore() //恢复之前保存的绘图上下文
-      ctx.draw();
+    //   ctx.rect(0, 0, 300, 200);
+    //   ctx.save();
+    //   ctx.beginPath() //开始创建一个路径
+    //   ctx.moveTo(375, 150)
+    //   ctx.arc(375, 150, radius, 0, 2 * Math.PI, false) //画一个圆形裁剪区域
+    //   ctx.lineWidth = 10;
+    //   ctx.strokeStyle= 'orange';
+    //   ctx.stroke(); //描边
+    //   ctx.fillStyle = color;
+    //   ctx.fill();
+    //   ctx.clip() //裁剪
+    //  // ctx.drawImage('../image/logo.png', 100, 0, 100, 100) //绘制图片
+    //   ctx.restore() //恢复之前保存的绘图上下文
+    //   ctx.draw();
+          ctx.beginPath();
+          ctx.moveTo(375, 100);
+          ctx.arc(375,100, radius,0, 2 * Math.PI, false);
+          ctx.stroke();
+          ctx.fillSyle="red";
+          ctx.fill()
     },
   getUserInfo: function(e) {
     console.log(e)
