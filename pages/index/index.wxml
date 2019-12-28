@@ -16,22 +16,23 @@
      </scroll-view>
    </view> -->
   <swiper class="swiper-block" circular="{{true}}" current="0" next-margin="100rpx"   bindchange="activeNav">
+    <navigator  url="../edit/edit">
     <block wx:for="{{navList}}">
       <swiper-item class="swiper-item" >
         <view class=" swiper_item_wrapper {{index == currentIndex ? 'active': ''}}" >
-          <image class="slide-image"src="../../resource/logo.png"  ></image>
+             <image class="slide-image"src="../../resource/logo.png"  ></image>
           <text class="username">{{item.username}}</text>
-        </view>
-         
+        </view>  
       </swiper-item>
-    </block> 
+    </block>
+    </navigator>
   </swiper>
     <!-- 最近登录时间 -->
     <view class="latestTime">最近检测时间：2019:12:01</view>
   </view>
  <!-- 视力数据 -->
   <view class="sight_wrap">
-      <navigator class="sight_left" url="../edit/edit">
+      <navigator class="sight_left" url="../detail/detail">
         <view class="num_wrap">
           <text class="highNum">4.5 </text>
           <text class="lowNum"> / 0.3</text>
@@ -53,9 +54,8 @@
       </view>
   </view>
   <view class="button_wrap">
-      <!-- <canvas style="width: 750px;min-height: 200px;" canvas-id="posterCanvas"/> -->
-      <image class="startbtn" src="../../resource/start.png">
-
-      </image>
+      <canvas  id="start" canvas-id="start" style="width: 200rpx;height: 200rpx">
+        <view class="start_detect">开始测试</view>
+      </canvas>
   </view>
 </view>

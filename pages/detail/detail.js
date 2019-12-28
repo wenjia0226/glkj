@@ -7,14 +7,33 @@ Page({
   data: {
 
   },
-
+ 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+     const  ctx1 = wx.createCanvasContext("runCanvas");
+     const  ctx2 = wx.createCanvasContext("runCanvas2");
+     this.drawCirlce(ctx1)
+     this.drawCirlce(ctx2)
   },
-
+  drawCirlce(ctx) {
+       var start = -Math.PI /2,
+            end = -Math.PI /2;
+        setInterval(function() {
+          ctx.clearRect(0,0, 20,200);
+          ctx.arc(80,80,50, start, end);
+          ctx.lineWidth = 10;
+          ctx.strokeStyle = "orange";
+          //ctx.font = "28rpx";
+          // ctx.textAlign = "center";
+          // ctx.textBaseline = 'middle';
+          // ctx.fillText('左眼视力',80,80)
+          ctx.stroke();
+          ctx.draw();
+          end += Math.PI /6;
+        }, 100)
+   },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

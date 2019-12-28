@@ -44,5 +44,80 @@
                 </view> 
             </view>
         </view>
+        <!-- 检测结果 -->
+        <view class="detect_title detect_result" >
+          <view class="title">检测结果</view>
+        </view>
+        <view class="eye_sight_wrap">
+            <view class="left_eye_sight">
+                <canvas canvas-id="runCanvas" id="runCanvas"  class="canvas_left" style="width:160px;height:160px;">
+                 <view class="left_eye">
+                    <view class="eye_left_title">左眼视力</view>
+                    <view class="hLleft">4.5</view>
+                    <view class="lLeft">0.3</view>
+                </view>
+                </canvas>
+                <view class="re_detect">
+                    左眼重测
+                </view>
+               
+            </view>
+            <view class="left_eye_sight">
+              <canvas canvas-id="runCanvas2" id="runCanvas2"  style="width:160px;height:160px">
+                  <view class="left_eye">
+                    <view class="eye_left_title">右眼视力</view>
+                    <view class="hLleft">4.5</view>
+                    <view class="lLeft">0.3</view>
+                </view>
+              </canvas>
+               <view class="re_detect">
+                    右眼重测
+                </view>
+            </view>
+        </view>
+         <!-- 检测记录 -->
+         <view class="detect_title">
+              <view class="title">检测记录</view>
+         </view>
+         <view class="title_wrap">
+            <view class="left_eye_detail">
+                <text> 左眼详情</text>
+                <view class="left_wrap_record">
+                    <view class="total_wrap">
+                    <view class="right_num" space="nbsp">正确: <text class="num" space="nbsp">  0.3  </text></view> 
+                    <view class="wrong">错误:  <text class="num">3</text></view>
+                    </view>
+                    <view class="total_wrap bg_bold" space="nbsp">
+                        <view class="hNum" >5.1 </view>
+                        <view class="lNum"> / 1.2</view>
+                    </view>
+                </view>
+                <view class="left_wrap_record">
+                    <view class="total_wrap">
+                    <view class="right_num" space="nbsp">正确: <text class="num" space="nbsp">  0.3  </text></view> 
+                    <view class="wrong">错误:  <text class="num">3</text></view>
+                    </view>
+                    <view class="total_wrap bg_bold" space="nbsp">
+                        <view class="hNum" >5.1 </view>
+                        <view class="lNum"> / 1.2</view>
+                    </view>
+                </view>
+            </view>
+
+            <view class="left_eye_detail">
+                <text> 右眼详情</text>
+                <view class="left_wrap_record">
+                    <view class="total_wrap">
+                    <view class="right_num" space="nbsp">正确: <text class="num" space="nbsp">  0.3  </text></view> 
+                    <view class="wrong">错误:  <text class="num">3</text></view>
+                    </view>
+                    <view class="total_wrap bg_bold" space="nbsp">
+                        <view class="hNum" >5.1 </view>
+                        <view class="lNum"> / 1.2</view>
+                    </view>
+                </view>
+                
+            </view>       
+         </view>   
     </view>
  </view>
