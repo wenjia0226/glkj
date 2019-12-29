@@ -17,7 +17,30 @@
         <!-- 检测设置 -->
         <view class="detect_title">
             <view class="title">检测设置</view>
-            <view class="correct">纠正检测参数</view>
+            <view class="correct" bindtap="submit">纠正检测参数</view>
+            <!-- <modal show="{{showModal}}" height='60%' bindcancel="modalCancel" bindconfirm='modalConfirm'>
+                <view class='modal-content'>你自己的布局</view>
+            </modal> -->
+            <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}" bindtap="hideMode"></view>
+            <view class="modalDlg" wx:if="{{showModal}}">
+                <image src="../../resource/find.png" style="width: 200rpx;height: 200rpx" ></image>
+                <view  bindtap="handleProgress">
+                    <image src="../../resource/home.png" style="width: 200rpx;height: 200rpx">
+                    </image>
+                </view>
+                
+                <view class="showProgress" wx:if="{{show}}">
+                        hello 
+                </view>
+                <image src="../../resource/dangan.png" style="width: 200rpx;height: 200rpx"></image>
+                <image src="../../resource/home.png" style="width: 200rpx;height: 200rpx"></image>
+                <!-- <image src="/images/model@2x.png"/>
+                <text class='modalDlg-txt'>请确定已收到货物？</text>
+                <view class='btn'>
+                <view class='cancel' bindtap='cancenlClick'>取消</view>
+                <view class='confirm' bindtap='confirmClick'>确认</view> 
+                </view>-->
+            </view>
         </view>
         <view class="detect_content">
             <view class="detect_data">检测时间：2019-12-23 13：48</view>

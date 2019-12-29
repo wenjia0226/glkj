@@ -15,7 +15,7 @@
   text-align: center;
 }
 .activeSwiper {
-  transform: scale(1.5);
+  transform: scale(1.2);
   transition: all 2s ease-in 0s;
   z-index: 20;
 }
@@ -80,10 +80,10 @@
   display:flex;
   justify-content: center;
   align-items: center;
-  height: 400rpx;
-  color: orange;
+  color: #fff;
   font-weight:bold;
   font-size: 40rpx;
+  height: 400rpx;
 }
 .startbtn {
    width: 200rpx;
@@ -101,6 +101,7 @@
   justify-content: center;
   align-items: center;
   overflow: unset;
+ 
 }
 .swiper_item_wrapper {
   width: 80%;
@@ -108,21 +109,25 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 200rpx;
 }
 .slide-image {
-  height: 150rpx;
+  height: 100rpx;
   width: 40%;
   border-radius: 10rpx;
   margin: 0rpx 10rpx;
   z-index: 1;
+  margin: 10rpx 0;
 }
 .active {
   transform: scale(1.8);
   transition: all 0.2s ease-in 0s;
   z-index: 20;
+  margin-top: 20rpx;
 }
 .username {
   font-size: 24rpx;
   font-weight: normal;
   padding: 10rpx;
+  min-height: 100rpx;
 }

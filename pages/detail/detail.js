@@ -5,9 +5,45 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    showModal: false,
+    show: false
   },
- 
+  submit: function () {
+    this.setData({
+      showModal: true
+    })
+  },
+  preventTouchMove: function () {
+      this.setData({
+        showModal: false
+      })
+  },
+  cancenlClick:function() {
+      this.setData({
+        showModal:false
+      })
+  },
+  confirmClick:function() {
+        this.setData({
+          showModal: !this.data.showModal
+        })
+  },
+  hideMode: function() {
+    this.setData({
+      showModal: false
+    })
+  },
+  go: function () {
+    this.setData({
+      showModal: false
+    })
+  },
+  handleProgress: function() {
+    console.log(11)
+    this.setData({
+      show: !this.data.show
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -34,13 +70,14 @@ Page({
           end += Math.PI /6;
         }, 100)
    },
+   methods: {
+   
+   },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-
+  onReady: function() {
   },
-
   /**
    * 生命周期函数--监听页面显示
    */

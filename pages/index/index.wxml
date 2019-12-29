@@ -20,7 +20,7 @@
     <block wx:for="{{navList}}">
       <swiper-item class="swiper-item" >
         <view class=" swiper_item_wrapper {{index == currentIndex ? 'active': ''}}" >
-             <image class="slide-image"src="../../resource/logo.png"  ></image>
+             <image class="slide-image"src="../../resource/logo.png" style="width: 150rpx;height: 150rpx"></image>
           <text class="username">{{item.username}}</text>
         </view>  
       </swiper-item>
@@ -54,8 +54,8 @@
       </view>
   </view>
   <view class="button_wrap">
-      <canvas  id="start" canvas-id="start" style="width: 200rpx;height: 200rpx">
-        <view class="start_detect">开始测试</view>
+      <canvas  id="start" canvas-id="start" style="width: 400rpx;height: 400rpx">
+        <!-- <view class="start_detect">开始测试</view> -->
       </canvas>
   </view>
 </view>

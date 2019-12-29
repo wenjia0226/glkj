@@ -73,11 +73,19 @@ Page({
   },
   drawCirlce: function(ctx) {
     ctx.arc(100,100,60,0, Math.PI *2, false);
-    ctx.fillStyle = 'orange';
+    ctx.fillStyle = 'red';
     ctx.lineWidth = 10;
     ctx.strokeStyle= "blue";
     ctx.fill();
     ctx.stroke();
+    ctx.fillStyle = '#fff';
+    ctx.lineWidth = 10;
+    ctx.strokeStyle= "blue";
+    ctx.font = "18rpx bold 黑体";
+    ctx.textAlign = "center";
+    ctx.textBaseline = 'middle';
+    ctx.fillText('开始测试', 100,100)
+  
     ctx.draw();
   },
     draw(ctx,radius,url) {
@@ -112,5 +120,6 @@ Page({
    ctx.clip();
    //ctx.drawImage(url, avatarurl_x, avatarurl_y, avatarurl_width, avatarurl_heigth);
    ctx.restore();
- }
+ },
+ 
 })
