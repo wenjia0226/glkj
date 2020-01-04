@@ -1,39 +1,72 @@
-//app.js
+const TOKEN = 'token';
 App({
-  onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+  globalData: {
+    token: ''
+  },
+  /**
+   * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
+   */
+  onLaunch: function (options) {
+    const token = wx.getStorageSync(TOKEN);
+    if (token && token.length !== 0) {
+      this.check_token(token);
+    } else {
+      this.login();
+    }
+    console.log(options)
+    //判断是否由分享进入小程序
+    if (options.scene == 1007 || options.scene == 1008) {
+      this.globalData.share = true;
+    } else {
+      this.globalData.share = false;
+    }
+    //获取设备窗口的高度
+    wx.getSystemInfo({
+      success: (res) => {
+        console.log(res)
+        this.globalData.height = res.statusBarHeight;
+      },
+      globalData: {
+        appid: '',
+        share: false,
+        height: 0
       }
-    })
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
-
-              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-              // 所以此处加入 callback 以防止这种情况
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
-              }
-            }
-          })
-        }
+    });
+  },
+  check_token(token) {
+    console.log('执行了token')
+    wx.request({
+      url: 'http://123.207.32.32:3000/auth',
+      method: 'post',
+      header: {
+        token
+      },
+      success: (res) => {
+        console.log(res)
+      },
+      fail: (err) => {
+        console.log(err)
       }
     })
   },
-  globalData: {
-    userInfo: null
+  login() {
+    console.log('执行了登录操作')
+    wx.login({
+      success: (res) => {
+        const code = res.code;
+        wx.request({
+          url: 'http://123.207.32.32:3000/login',
+          method: 'post',
+          data: { code },
+          success: (res) => {
+            const token = res.data.token;
+            //将token保存在globalData中
+            this.globalData.token = token;
+            //将token本地存储
+            wx.setStorageSync(TOKEN, token)
+          }
+        })
+      }
+    })
   }
 })

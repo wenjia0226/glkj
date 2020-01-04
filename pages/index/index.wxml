@@ -1,5 +1,9 @@
 <!--index.wxml-->
+
 <view class="main">
+  <nav-bar navbar-data="{{navbarData}}"></nav-bar>
+   <view style="margin-top: {{height}}px">
+    
   <view class="swiper_wrap">
    <!-- <canvas canvas-id="anvertor" style="width:750px;height:150px"></canvas> -->
    <!-- 首页轮播图 -->
@@ -15,6 +19,7 @@
        </view>
      </scroll-view>
    </view> -->
+   
   <swiper class="swiper-block" circular="{{true}}" current="0" next-margin="100rpx"   bindchange="activeNav">
     <navigator  url="../edit/edit">
     <block wx:for="{{navList}}">
@@ -57,5 +62,6 @@
       <canvas  id="start" canvas-id="start" style="width: 400rpx;height: 400rpx">
         <!-- <view class="start_detect">开始测试</view> -->
       </canvas>
-  </view>
+  </view> 
+   </view>
 </view>

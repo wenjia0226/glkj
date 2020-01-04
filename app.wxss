@@ -4,3 +4,7 @@ page,view, image,swiper, swiper-item, navigator, video {
 bg {
   background-color: #333;
 }
+page {
+  position: relative;
+  z-index: 999;
+}

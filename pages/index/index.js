@@ -26,7 +26,12 @@ Page({
         "id": 4,
         "username": '大麦'
       }
-    ]
+    ],
+    navbarData: {
+      showCapsule: 1,
+      title: '我的页面',
+      height: app.globalData.height * 2 + 20
+    }
   },
   activeNav: function(e) {
     this.setData({

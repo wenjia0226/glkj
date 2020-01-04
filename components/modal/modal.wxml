@@ -1,3 +1,0 @@
-<view class='mask' wx:if='{{show}}' bindtap='clickMask'>
-   <slot wx:if="{{show}}"></slot>
-</view>

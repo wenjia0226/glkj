@@ -1,0 +1,18 @@
+<view class="nav-wrap" style="height: {{height * 2 + 20}}px">
+    <!-- 导航栏 中间的标题 -->
+    <view class="nav-title" style="height: {{height * 2 + 44}}px">
+    {{navbarData.title}}
+    </view>
+    <view style="height: {{height * 2 +44}}px;"wx:if="{{navbarData.showCapsule}}">
+      <!-- 导航栏 左上角的返回按钮和 home按钮
+      其中wx:if='{{navbarData.showCapsule}}'是控制左上角按钮的希纳是隐藏，首页不显示   -->
+      <view class="nav-capsule">
+         <view bindtap="_navback" wx:if="{{!share}}">
+             <image  src="../../resource/find.png" class="back-pre"></image>
+         </view>
+         <view bindtap="_navhome" vx:if="{{share}}">
+            <image src="../../resource/home.png" class="back-home"></image>
+         </view>
+      </view>
+    </view>
+</view>

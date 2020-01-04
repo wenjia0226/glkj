@@ -1,6 +1,6 @@
 {
   "navigationBarTitleText": "首页",
   "usingComponents": {
-    "popup":"/components/popup/popup"
+    "nav-bar": "/components/navbar/navbar"
   }
 }

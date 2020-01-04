@@ -1,0 +1,6 @@
+<!--pages/detect/detect.wxml--> 
+<view class="container" style="padding-top: 0px">
+    <image src="../image/logo.png" mode="widthFix">
+        
+    </image>
+</view>
