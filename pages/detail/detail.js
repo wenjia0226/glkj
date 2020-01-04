@@ -1,12 +1,18 @@
 // pages/detail/detail.js
+const app = getApp()
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    showModal: false,
-    show: false
+    showModal: true,
+    show: false,
+    navbarData: {
+      showCapsule: 1,
+      title: '详情',
+    },
+    height: app.globalData.height * 2 + 20,
+    value: 0
   },
   submit: function () {
     this.setData({
@@ -39,7 +45,6 @@ Page({
     })
   },
   handleProgress: function() {
-    console.log(11)
     this.setData({
       show: !this.data.show
     })
@@ -70,8 +75,14 @@ Page({
           end += Math.PI /6;
         }, 100)
    },
+   //获取滑块的值
+   getValue (e) {
+    this.setData({
+      value: e.detail.value
+    })
+  },
    methods: {
-   
+    
    },
   /**
    * 生命周期函数--监听页面初次渲染完成

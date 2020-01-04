@@ -1,7 +1,10 @@
 const TOKEN = 'token';
 App({
   globalData: {
-    token: ''
+    token: '',
+    appid: '',
+    share: false,
+    height: 0
   },
   /**
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
@@ -13,7 +16,6 @@ App({
     } else {
       this.login();
     }
-    console.log(options)
     //判断是否由分享进入小程序
     if (options.scene == 1007 || options.scene == 1008) {
       this.globalData.share = true;
@@ -23,13 +25,7 @@ App({
     //获取设备窗口的高度
     wx.getSystemInfo({
       success: (res) => {
-        console.log(res)
         this.globalData.height = res.statusBarHeight;
-      },
-      globalData: {
-        appid: '',
-        share: false,
-        height: 0
       }
     });
   },
@@ -42,7 +38,6 @@ App({
         token
       },
       success: (res) => {
-        console.log(res)
       },
       fail: (err) => {
         console.log(err)

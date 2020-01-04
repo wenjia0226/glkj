@@ -1,6 +1,4 @@
- 
-import WxValidate from '../../utils/WxValidate.js'
-
+const app =  getApp();
  Page({
 
   /**
@@ -20,6 +18,11 @@ import WxValidate from '../../utils/WxValidate.js'
     tempFilePaths: '../image/logo.png',
     show: true,
     currentIndex: 0,
+    navbarData: {
+      showCapsule: 1,
+      title: '编辑',
+    },
+    height: app.globalData.height * 2 + 20
 
     
   },

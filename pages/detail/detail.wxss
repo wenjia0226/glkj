@@ -1,6 +1,5 @@
 /* pages/detail/detail.wxss */
-.bg {
-    
+.bg { 
     position: absolute;
     left: 0;
     right: 0;
@@ -316,11 +315,11 @@
 }
  
 .modalDlg{
-    width: 100%;
-    margin: 0 auto;
+    width: 90%;
     min-height: 300rpx;
     position: fixed;
-    bottom: -600rpx;
+    left: -6%;
+    bottom: 0rpx;
     z-index: 100;
     background-color: #fff;
     border-radius: 36rpx;
@@ -359,4 +358,80 @@
 .showProgress {
     z-index: 200;
     background: red;
+}
+.modalTaikuang {
+    width: 100%;
+    min-height: 500rpx;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background:#fff;
+    z-index: 999;
+    border-radius: 20rpx 20rpx 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.top, .bottom {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 30rpx;
+}
+.yanjing {
+   
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  
+}
+
+.img_item { 
+    height: 80rpx;
+    width: 80rpx;
+    border-radius: 80rpx;
+    background: #32CD32;
+    font-weight: bold;
+    font-size: 28rpx;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.yanjing text {
+    font-size: 30rpx;
+    padding: 20rpx 10rpx;
+}
+.img_item:active {
+    background: #32CD32;
+}
+.img_grey {
+    background: #bebebe;
+}
+.img_opacity {
+    opacity: .5
+}
+/* 进度条 */
+.progress_container {
+    position: fixed;
+    left: 0;
+    bottom: 480rpx;
+    width: 100%;
+    height: 200rpx;
+    background: #fff;
+}
+.gap_con {
+    padding: 10rpx;
+    font-weight: bold;
+}
+.gap {
+    font-size: 30rpx;
+}
+.gap_title {
+    color: #32CD32
 }

@@ -13,6 +13,8 @@
 }
 .swiper_wrap {
   text-align: center;
+  margin-top: 30rpx;
+  overflow: hidden;
 }
 .activeSwiper {
   transform: scale(1.2);

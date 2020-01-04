@@ -28,10 +28,10 @@ Page({
       }
     ],
     navbarData: {
-      showCapsule: 1,
-      title: '我的页面',
-      height: app.globalData.height * 2 + 20
-    }
+      showCapsule: 0,
+      title: '首页',
+    },
+    height: app.globalData.height * 2 + 20
   },
   activeNav: function(e) {
     this.setData({

@@ -1,4 +1,5 @@
 {
-  "navigationBarTitleText": "视力档案",
-  "usingComponents": {}
+  "usingComponents": {
+    "nav-bar": "/components/navbar/navbar"
+  }
 }

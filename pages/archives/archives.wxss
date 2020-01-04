@@ -110,6 +110,7 @@
 .list_right {
   flex: 8;
   display:flex;
+  background: #eee;
 }
 
 .lefteye{

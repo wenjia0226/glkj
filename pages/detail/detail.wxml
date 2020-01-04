@@ -1,6 +1,8 @@
 <!--pages/detail/detail.wxml-->
 <!-- 头部 -->
 <view class="bg">
+    <nav-bar navbar-data='{{navbarData}}'></nav-bar>
+    <view style='margin-top: {{height}}px'>
     <view class="detail_wrap"> 
         <!-- 表头 -->
         <view class="detail_header">
@@ -22,7 +24,7 @@
                 <view class='modal-content'>你自己的布局</view>
             </modal> -->
             <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}" bindtap="hideMode"></view>
-            <view class="modalDlg" wx:if="{{showModal}}">
+            <!-- <view class="modalDlg" wx:if="{{showModal}}">
                 <image src="../../resource/find.png" style="width: 200rpx;height: 200rpx" ></image>
                 <view  bindtap="handleProgress">
                     <image src="../../resource/home.png" style="width: 200rpx;height: 200rpx">
@@ -34,12 +36,83 @@
                 </view>
                 <image src="../../resource/dangan.png" style="width: 200rpx;height: 200rpx"></image>
                 <image src="../../resource/home.png" style="width: 200rpx;height: 200rpx"></image>
-                <!-- <image src="/images/model@2x.png"/>
-                <text class='modalDlg-txt'>请确定已收到货物？</text>
-                <view class='btn'>
-                <view class='cancel' bindtap='cancenlClick'>取消</view>
-                <view class='confirm' bindtap='confirmClick'>确认</view> 
-                </view>-->
+            </view> -->
+            <view class="modalTaikuang" wx:if="{{showModal}}">
+                <view class="top">
+                    <view class="yanjing">
+                    <view class="img_item" >
+                        <!-- <image class="luoyan" src="../../resource/find.png"></image> -->
+                        裸眼
+                    </view>
+                    </view>
+                    <view class="yanjing">
+                        <view class="img_item  img_grey" bindtap="show">
+                            眼镜
+                        </view>
+                        <view class="progress_container">
+                            <view class="first_gap">
+                                <view class="gap_con">
+                                    <text class="gap">左眼度数</text>  
+                                    <text class="gap_title">{{value}}</text>
+                                </view>
+                                <view class="body-view">
+                                    <slider bindchange="getValue" show-value min="0" max="1200"/>
+                                </view>
+                            </view>
+                            <view class="first_gap">
+                                <view class="gap_con">
+                                    <text class="gap">右眼度数</text>  
+                                    <text class="gap_title">{{value}}</text>
+                                </view>
+                                <view class="body-view">
+                                    <slider bindchange="getValue" show-value min="0" max="1200"/>
+                                </view>
+                            </view>
+                           <view class="first_gap">
+                                <view class="gap_con">
+                                    <text class="gap">左眼散光</text>  
+                                    <text class="gap_title">{{value}}</text>
+                                </view>
+                                <view class="body-view">
+                                    <slider bindchange="getValue" show-value min="0" max="1200"/>
+                                </view>
+                            </view>
+                            <view class="first_gap">
+                                <view class="gap_con">
+                                    <text class="gap">右眼散光</text>  
+                                    <text class="gap_title">{{value}}</text>
+                                </view>
+                                <view class="body-view">
+                                    <slider bindchange="getValue" show-value min="0" max="1200"/>
+                                </view>
+                            </view>
+                        </view>
+
+                        <view class="first_gap">
+                                <view class="gap_con">
+                                    <text class="gap">左眼度数</text>  
+                                    <text class="gap_title">{{value}}</text>
+                                </view>
+                                <view class="body-view">
+                                    <slider bindchange="getValue" show-value min="0" max="1200"/>
+                                </view>
+                            </view>
+                     </view>
+                </view>
+                <view class="bottom">
+                    <view class="yanjing">
+                    <view class="img_item">
+                         <image src="../../resource/find.png" style="width: 60rpx;height: 60rpx"></image>
+                    </view>
+                    <text>裸眼眼镜</text>
+                </view>
+                 <view class="yanjing">
+                    <view class="img_item img_opacity">
+                         <image src="../../resource/find.png" style="width: 60rpx;height: 60rpx"></image>
+                    </view>
+                    <text>检测距离</text>
+                 </view>
+                </view>
             </view>
         </view>
         <view class="detect_content">
@@ -49,15 +122,15 @@
                     <view class="detail_msg"> 检测距离</view>
                     <view class="detail_num">2.5m</view>
                 </view> 
-                  <view class="detail_item">
+                <view class="detail_item">
                     <view class="detail_msg"> 检测距离</view>
                     <view class="detail_num">2.5m</view>
                 </view> 
-                   <view class="detail_item">
+                <view class="detail_item">
                     <view class="detail_msg"> 检测距离</view>
                     <view class="detail_num">2.5m</view>
                 </view> 
-                  <view class="detail_item">
+                <view class="detail_item">
                     <view class="detail_msg"> 检测距离</view>
                     <view class="detail_num">2.5m</view>
                 </view> 
@@ -139,7 +212,7 @@
                         <view class="lNum"> / 1.2</view>
                     </view>
                 </view>
-                
+                </view>
             </view>       
          </view>   
     </view>

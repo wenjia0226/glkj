@@ -1,6 +1,5 @@
 {
-  "navigationBarTitleText": "详情",
   "usingComponents": {
-    "popup":"/components/modal/modal"
+    "nav-bar": "/components/navbar/navbar"
   }
 }

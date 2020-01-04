@@ -1,4 +1,6 @@
 <view class="main">
+  <nav-bar navbar-data='{{navbarData}}'></nav-bar>
+  <view style='margin-top: {{height}}px'>
   <view class="camera_wrap">
     <image src="{{tempFilePaths}}" mode="aspecFill" style="width: 200rpx;height:200rpx" bindtap="chooseImage"></image>
   </view>
@@ -61,4 +63,5 @@
         <button class="btn-add" form-type="reset">重置</button>
     </view>
   </form>
+  </view>
 </view>
