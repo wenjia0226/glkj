@@ -7,12 +7,65 @@ Page({
   data: {
     showModal: true,
     show: false,
+    left_Degrees: 0,
+    right_Degrees: 0,
+    left_astigmatism: 0,
+    right_astigmatism: 0,
     navbarData: {
       showCapsule: 1,
       title: '详情',
     },
     height: app.globalData.height * 2 + 20,
-    value: 0
+    value: 0,
+    showGlasses: false,
+    show_distance: false,
+  },
+   //获取滑块的值
+   getValue (e) {
+    this.setData({
+      value: e.detail.value
+    })
+  },
+  showDistance() {
+    this.setData({
+      show_distance:  true
+    })
+  },
+  hideDistance () {
+    this.setData({
+      show_distance: false
+    })
+  },
+  getLeftDegrees(e) {
+    this.setData({
+      left_Degrees: e.detail.value
+    })
+  },
+  getRightDegrees(e) {
+    this.setData({
+      right_Degrees: e.detail.value
+    })
+  },
+  getLeftAstigmatism(e) {
+    this.setData({
+      left_astigmatism: e.detail.value
+    })
+  },
+  getRightAstigmatism(e) {
+    this.setData({
+      right_astigmatism: e.detail.value
+    })
+  },
+  //眼镜设置隐藏消失
+  glassesSetting: function() {
+    this.setData({
+      showGlasses: (!this.data.showGlasses)
+    })
+  },
+  hideGlasses() {
+    this.setData({
+      showGlasses: false
+    })
   },
   submit: function () {
     this.setData({
@@ -75,59 +128,9 @@ Page({
           end += Math.PI /6;
         }, 100)
    },
-   //获取滑块的值
-   getValue (e) {
-    this.setData({
-      value: e.detail.value
-    })
-  },
    methods: {
-    
-   },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
-  },
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
+     //获取滑块的值
+     
+   }
+ 
 })
