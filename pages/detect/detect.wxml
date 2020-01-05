@@ -1,6 +1,83 @@
-<!--pages/detect/detect.wxml--> 
-<view class="container" style="padding-top: 0px">
-    <image src="../image/logo.png" mode="widthFix">
-        
-    </image>
+<!--pages/detect/detect.wxml-->
+<view class="detect_wrapper">
+    <nav-bar navbar-data='{{navbarData}}'></nav-bar>
+        <view style='margin-top: {{height}}px' class="second_wrapper">
+            <!-- 头部图片 -->
+            <view class="detect_head">
+                <!-- 左侧人物 -->
+                <view class="left_detect">
+                    <image class="" src="../../resource/girl.jpg" mode="aspectFit" style="width: 200rpx;height: 200rpx">
+                        
+                    </image>
+                    <text class="left_eye_title" >
+                        左眼
+                    </text>
+                </view>
+                <!-- 中间数据显示 -->
+                <view class="center_detect">
+                    <view class="data" >
+                        4.5 / 2.5
+                    </view>
+                    <view class="num_wrap">
+                        <view class="right_wrong" >正确：<text class="right_num"> {{0}}</text></view>
+                        <view class="right_wrong" >错误：<text class="wrong_num"> {{0}}</text></view>
+                    </view>
+                    <view class="luoyan">裸眼    2.5m</view>
+                </view>
+                <!-- 右侧人物 -->
+                 <view class="left_detect">
+                    <image class="" src="../../resource/boy.jpg" mode="aspectFit" style="width: 200rpx;height: 200rpx">
+                        
+                    </image>
+                    <text class="left_eye_title" >
+                        右眼
+                    </text>
+                </view>
+            </view>
+            <!-- 中间图片展示 -->
+            <view class="image_wrapper" bindtouchstart="handletouchtart" bindtouchmove="handletouchmove">
+                <image class="" src="../../resource/find.png" style="width: 200rpx;height: 200rpx" > 
+                </image>
+                <text class="" selectable="false" space="false" decode="false">
+                    {{text}}
+                </text>
+                
+            </view>
+            <!-- 底部按钮 -->
+            <view class="detect_bottom">
+                <view class="bigger_con">
+                    <view class="bigger">
+                        <image class="" src="../../resource/find.png" style="width: 50rpx; height: 50rpx;">
+                            
+                        </image>
+                    </view>
+                    <view class="big_title">增大</view>
+                </view>
+                 <view class="bigger_con">
+                    <view class="bigger">
+                        <image class="" src="../../resource/find.png" style="width: 50rpx; height: 50rpx;">
+                            
+                        </image>
+                    </view>
+                    <view class="big_title">减小</view>
+                </view>
+                <view class="bigger_con">
+                    <view class="bigger">
+                        <image class="" src="../../resource/find.png" style="width: 50rpx; height: 50rpx;">
+                            
+                        </image>
+                    </view>
+                    <view class="big_title">撤销</view>
+                </view>
+                <view class="bigger_con">
+                    <view class="bigger">
+                        <image class="" src="../../resource/find.png" style="width: 50rpx; height: 50rpx;">
+                            
+                        </image>
+                    </view>
+                    <view class="big_title">设置</view>
+                </view>
+            </view>
+        </view>
 </view>
+

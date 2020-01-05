@@ -78,14 +78,14 @@ Page({
   },
   drawCirlce: function(ctx) {
     ctx.arc(100,100,60,0, Math.PI *2, false);
-    ctx.fillStyle = 'red';
+    ctx.fillStyle = '#00CD66';
     ctx.lineWidth = 10;
-    ctx.strokeStyle= "blue";
+    ctx.strokeStyle= "#00FF00";
     ctx.fill();
     ctx.stroke();
     ctx.fillStyle = '#fff';
     ctx.lineWidth = 10;
-    ctx.strokeStyle= "blue";
+    ctx.strokeStyle= "#00FF00";
     ctx.font = "18rpx bold 黑体";
     ctx.textAlign = "center";
     ctx.textBaseline = 'middle';

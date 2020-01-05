@@ -1,1 +1,117 @@
 /* pages/detect/detect.wxss */
+/* 头部 */
+.detect_wrapper {
+    background: #eee;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  
+}
+.second_wrapper {
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.detect_head {
+   display:flex;
+   width: 90%;
+   margin: 20rpx 5%;
+   padding-top: 30rpx;
+   height: 200rpx;
+   
+}
+.left_detect {
+    width: 25%;
+    height: 200rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* 头部中间文字样式 */
+.center_detect {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.left_eye_title {
+    color:  #333;
+    font-size: 24rpx;
+}
+.data {
+    font-weight: bold;
+    font-size: 40rpx;
+}
+.num_wrap {
+    display: flex;
+}
+.right_wrong{
+    color: #000;
+    font-size: 24rpx;
+    padding: 0 10rpx;
+}
+.right_num {
+    font-size: 30rpx;
+    color: orange;
+}
+.luoyan {
+    height: 60rpx;
+    line-height: 60rpx;
+    width: 200rpx;
+    text-align: center;
+    border-radius: 40rpx;
+    background: grey;
+    font-size: 30rpx;
+}
+.wrong_num {
+    font-size: 30rpx;
+    color: #03a89e
+}
+ /* 中间图片 */
+.image_wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* 底部按钮 */
+.detect_bottom {
+    height: 200rpx;
+    width: 90%;
+    margin: 0 5%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.bigger_con {
+    box-sizing: border-box;
+    height: 200rpx;
+    width: 20%;
+    padding:10rpx 0 40rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.bigger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 100rpx;
+    background: #03a89e;
+}
+.big_title {
+    font-size: 28rpx;
+    font-weight: bold;
+    color: #333;
+}

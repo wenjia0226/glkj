@@ -1,6 +1,5 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "视力检测",
-  "navigationStyle": "custom"
-
+  "usingComponents": {
+    "nav-bar": "/components/navbar/navbar"
+  }
 }

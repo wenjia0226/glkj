@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    showModal: true,
+    showModal: false,
     show: false,
     left_Degrees: 0,
     right_Degrees: 0,
@@ -22,7 +22,6 @@ Page({
     show_distance: false,
   },
   selectDistance (e) {
-    console.log(e)
     this.setData({
       select_dis: e.currentTarget.dataset.index
       }
@@ -129,7 +128,7 @@ Page({
           ctx.clearRect(0,0, 20,200);
           ctx.arc(80,80,50, start, end);
           ctx.lineWidth = 10;
-          ctx.strokeStyle = "orange";
+          ctx.strokeStyle = "#32CD32";
           //ctx.font = "28rpx";
           // ctx.textAlign = "center";
           // ctx.textBaseline = 'middle';

@@ -19,12 +19,12 @@
       </scroll-view>
     </view> -->
     
-    <swiper class="swiper-block" circular="{{true}}" current="0" next-margin="100rpx"   bindchange="activeNav">
+    <swiper class="swiper-block" circular="{{true}}" current="0" next-margin="120rpx"  previous-margin="120px"   bindchange="activeNav">
       <navigator  url="../edit/edit">
       <block wx:for="{{navList}}">
         <swiper-item class="swiper-item" >
           <view class=" swiper_item_wrapper {{index == currentIndex ? 'active': ''}}" >
-              <image class="slide-image"src="../../resource/logo.png" style="width: 150rpx;height: 150rpx"></image>
+              <image class="slide-image"src="../../resource/girl.jpg" style="width: 150rpx;height: 150rpx"></image>
             <text class="username">{{item.username}}</text>
           </view>  
         </swiper-item>
@@ -59,9 +59,12 @@
       
     </view>
     <view class="button_wrap">
-        <canvas  id="start" canvas-id="start" style="width: 400rpx;height: 400rpx">
-          <!-- <view class="start_detect">开始测试</view> -->
-        </canvas>
+      <navigator url="../detect/detect">
+      开始测试
+        <!-- <canvas  id="start" canvas-id="start" style="width: 400rpx;height: 400rpx">
+           <view class="start_detect">开始测试</view> 
+        </canvas> -->
+      </navigator>
     </view>
     </view>
 </view>

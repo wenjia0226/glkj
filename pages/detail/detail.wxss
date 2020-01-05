@@ -57,7 +57,7 @@
 .correct {
     color: #ffff;
     font-size: 30rpx;
-    background: orange;
+    background: #32CD32;
     border-radius: 30rpx;
     height: 50rpx;
     line-height: 50rpx;
@@ -132,7 +132,7 @@
 .hLleft {
     font-weight: bold;
     font-size: 36rpx;
-    color: orange
+    color: #32CD32
 }
 .lLeft {
     font-weight: bold;
@@ -145,7 +145,7 @@
     line-height: 60rpx;
     color: #fff;
     text-align: center;
-    background: orange;
+    background: #32CD32;
     border-radius: 30rpx;
     font-size: 28rpx;
 }
@@ -192,7 +192,7 @@
     justify-content: space-around;
     align-items: center;
     height: 120rpx;
-    box-shadow: 5rpx 5rpx 5rpx 5rpx orange;
+    box-shadow: 5rpx 5rpx 5rpx 5rpx #32CD32;
     border-radius: 10rpx;
     margin: 10rpx 0;
     
@@ -210,12 +210,12 @@
     
 }
 .num {
-   color: red;  
+   color: #00CD66;  
    font-size: 24rpx;
 }
 .hNum {
     font-size: 34rpx;
-    color: red;
+    color: #00CD66;
 }
 .lNum {
     font-size: 34rpx;
@@ -238,7 +238,7 @@
     justify-content: space-around;
     align-items: center;
     min-height: 200rpx;
-    background-color:red;
+    background-color:#00CD66;
     border-radius: 10rpx;
 }
 .icon {
@@ -357,7 +357,7 @@
 /* 显示进度条 */
 .showProgress {
     z-index: 200;
-    background: red;
+    background: #00CD66;
 }
 .modalTaikuang {
     width: 100%;
@@ -448,5 +448,5 @@
     opacity: .5
 }
 .select_dis {
-    background: red;
+    background: #00CD66;
 }

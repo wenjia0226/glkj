@@ -9,6 +9,7 @@
        //从分享进入小程序时 返回上一级按钮不应该存在 -->
       <view bindtap='_navback' wx:if='{{!share}}'>
         <image src='../../resource/find.png' mode='aspectFill' class='back-pre'></image>
+       
       </view>
       <view class='navbar-v-line' wx:if='{{!share}}'></view>
       <view bindtap='_backhome'>
