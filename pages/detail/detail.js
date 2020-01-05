@@ -11,6 +11,7 @@ Page({
     right_Degrees: 0,
     left_astigmatism: 0,
     right_astigmatism: 0,
+    select_dis: 0,
     navbarData: {
       showCapsule: 1,
       title: '详情',
@@ -19,6 +20,13 @@ Page({
     value: 0,
     showGlasses: false,
     show_distance: false,
+  },
+  selectDistance (e) {
+    console.log(e)
+    this.setData({
+      select_dis: e.currentTarget.dataset.index
+      }
+    )
   },
    //获取滑块的值
    getValue (e) {
@@ -29,6 +37,9 @@ Page({
   showDistance() {
     this.setData({
       show_distance:  true
+    })
+    this.setData({
+      showGlasses: false
     })
   },
   hideDistance () {

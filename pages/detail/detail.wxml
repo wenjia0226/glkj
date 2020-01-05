@@ -86,13 +86,13 @@
                         <!-- 点击检测距离出来数据 -->
                         <view class="top distance" wx:if="{{show_distance}}">
                             <view class="yanjing">
-                                <view class=" {{showGlasses? 'img_grey': ''}} img_item" bindtap="hideGlasses">50</view>
+                                <view class=" img_item {{select_dis == 0 ? 'select_dis': ''}}" data-index = "0" bindtap="selectDistance">50</view>
                             </view>
                             <view class="yanjing">
-                                <view class=" {{showGlasses? 'img_grey': ''}} img_item" bindtap="hideGlasses">100</view>
+                                <view class="img_item {{select_dis == 1 ? 'select_dis': ''}}" data-index="1" bindtap="selectDistance">100</view>
                             </view>
                             <view class="yanjing">
-                                <view class=" {{showGlasses? 'img_grey': ''}} img_item" bindtap="hideGlasses">150</view>
+                                <view class="img_item {{select_dis == 2 ? 'select_dis': ''}}" data-index="2" bindtap="selectDistance">150</view>
                             </view>
                         </view>
                     </view>

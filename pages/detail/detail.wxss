@@ -429,7 +429,8 @@
     font-size: 30rpx;
 }
 .gap_title {
-    color: #32CD32
+    color: #32CD32;
+    padding: 0 20rpx;
 }
 /* 距离 */
 .distance {
@@ -445,4 +446,7 @@
 }
 .img_opacity {
     opacity: .5
-} 
+}
+.select_dis {
+    background: red;
+}
