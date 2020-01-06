@@ -35,13 +35,18 @@
                 </view>
             </view>
             <!-- 中间图片展示 -->
-            <view class="image_wrapper" bindtouchstart="handletouchtart" bindtouchmove="handletouchmove">
-                <image class="" src="../../resource/find.png" style="width: 200rpx;height: 200rpx" > 
-                </image>
-                <text class="" selectable="false" space="false" decode="false">
-                    {{text}}
-                </text>
-                
+            <view class="image_wrapper" bindtouchstart="handletouchtart" bindtouchmove="handletouchmove" >    
+            <view wx:for="{{mockEyeData}}" wx:key="id">
+
+                  <view class="second" wx:for="{{item.twodata}}" wx:for-item="sheet" wx:for-index="i" wx:key="id">
+                    <image class="eye" src="{{sheet.src}}" style='width: 100rpx;height: 100rpx'data-id="{{sheet.id}}" wx:if="{{random == sheet.id}}">
+                    </image>
+                    {{sheet.id}} -- {{random}} -- {{i}}
+                   
+                    
+                </view>
+            </view>
+                 
             </view>
             <!-- 底部按钮 -->
             <view class="detect_bottom">

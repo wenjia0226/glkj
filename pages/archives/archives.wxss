@@ -13,6 +13,7 @@
 .swiper_wrap {
   width: 100%;
   margin: 20rpx 0;
+  padding-top: 50rpx;
 }
 .swiper-block {
   height: 150rpx;
@@ -110,7 +111,7 @@
 .list_right {
   flex: 8;
   display:flex;
-  background: #eee;
+  background: #fff;
 }
 
 .lefteye{
@@ -121,7 +122,6 @@
   width: 49%;
   text-align: center;
   padding: 10rpx;
-  height: 150rpx;
 }
 .left_eye_num {
   display: inline-block;
