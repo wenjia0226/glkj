@@ -14,31 +14,39 @@ Page({
     lastX: 0,
     lastY: 0,
     text: "没有滑动",
-    random: 11,
-    show: true,
+    random: 1,
     showImg: '',
+    levelPre: 1,
+    counter: 2,
+    showItem: true,
+    rightNum: 0,
+    wrongNum: 0,
     mockEyeData: [
       {
         id: 1,
         wufen: 4.0,
         xiaoshu: 0.1,
-        leval: 1,
+        level: 1,
         twodata: [{
-          id: 1,
+          record: 1,
           src: '../../resource/4.png',
           answer: '右'
+        }, {
+          record: 2,
+            src: '../../resource/find.png',
+            answer: '眼睛'
         }]
       }, {
         id: 2,
         wufen: 4.1,
         xiaoshu: 0.12,
-        leval: 2,
+        level: 2,
         twodata: [{
-          id: 1,
+          record: 1,
           src: '../../resource/411.png',
           answer: '左'
         }, {
-          id: 2,
+          record: 2,
           src: '../../resource/412.png',
           answer: '上'
         }]
@@ -46,21 +54,23 @@ Page({
         id: 3,
         wufen: 4.2,
         xiaoshu: 0.15,
-        leval: 3,
+        level: 3,
         twodata: [{
-          id: 1,
+          record: 1,
           src: '../../resource/421.png',
           answer: '右'
         }, {
-          id: 2,
+          record: 2,
           src: '../../resource/422.png',
           answer: '下'
         }]
       }]
   },
-  getRandom: function() {
-    console.log(Math.random() * 10 )
-    return Math.floor(Math.random() * 10 + 1)
+  //触摸操作
+  handletouchtart: function (event) {
+    // 赋值
+    this.data.lastX = event.touches[0].pageX
+    this.data.lastY = event.touches[0].pageY
   },
   handletouchmove: function (event) {
     let currentX = event.touches[0].pageX
@@ -68,36 +78,15 @@ Page({
     let tx = currentX - this.data.lastX
     let ty = currentY - this.data.lastY
     let text = ""
-
     if (Math.abs(tx) > Math.abs(ty)) {
       //左右方向滑动
-      if (tx < 0)
-       { text = "左"}
-      else if (tx > 0)
-       { text = "右"}
+      if (tx < 0) { text = "左" }
+      else if (tx > 0) { text = "右" }
     }
     else {
       //上下方向滑动
-      if (ty < 0)
-        {text = "上"}
-      else if (ty > 0)
-        {text = "下"}
-        var rand = Math.floor(Math.random() * 10 + 10)
-        this.setData({
-          random: rand
-        })
-        //  this.setData({
-        //    random:  rand
-        //  })
-       let imgCon = this.data.mockEyeData.map(function(item, index, arr) { 
-          return item.twodata
-        })
-        console.log(imgCon[2])
-        this.setData({
-         showImg: imgCon
-        })
-      
-       
+      if (ty < 0) { text = "上" }
+      else if (ty > 0) { text = "下" }
     }
     //将当前坐标进行保存以进行下一次计算
     this.data.lastX = currentX
@@ -105,14 +94,56 @@ Page({
     this.setData({
       text: text,
     });
-
   },
-  handletouchtart: function (event) {
-    // 赋值
-    this.data.lastX = event.touches[0].pageX
-    this.data.lastY = event.touches[0].pageY
+  handletouchend: function(event) {
+    //先设置等级，再对次数进行统计
+    if (this.data.levelPre < 4) {
+      if(this.data.counter == 2) {
+        console.log(2)
+        this.setData({
+          levelPre: this.data.levelPre + 1,
+          counter: this.data.counter - 1
+        })
+       
+      }else if(this.data.counter == 1) {
+        this.setData({
+          counter: this.data.counter - 1,
+          random: this.data.random + 1
+        })
+      }else {
+        this.setData({
+          counter: 2,
+          random: 1
+        })
+      }
+    }else {
+      this.setData({
+        levelPre: 1
+      })
+    }
   },
-  
+  //增大图片
+  biggerImg: function() {
+    if(this.data.levelPre < 4) {
+      this.setData({
+        levelPre: this.data.levelPre + 1
+      })
+    }
+    this.setData({
+      counter: 2
+    })
+  },
+  //减小图片
+  smallerImg: function() {
+    if(this.data.levelPre >1) {
+      this.setData({
+        levelPre: this.data.levelPre - 1
+      })
+      this.setData({
+        counter: 2
+      })
+    }
+  },
   onReady() {
 
   }

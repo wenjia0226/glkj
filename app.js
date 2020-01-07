@@ -10,11 +10,7 @@ App({
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
   onLaunch: function (options) {
-    wx.getUserInfo({
-      success: function(res) {
-        console.log(res)
-      }
-    })
+   
     const token = wx.getStorageSync(TOKEN);
     if (token && token.length !== 0) {
       this.check_token(token);
